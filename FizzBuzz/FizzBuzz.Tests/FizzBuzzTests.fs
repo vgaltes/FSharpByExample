@@ -2,7 +2,7 @@
 
 open NUnit.Framework
 
-let fizzBuzz input = ""
+let fizzBuzz input = "1"
 
 [<Test>]
 let ``the number 1 is returned as is`` () =
