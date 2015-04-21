@@ -2,7 +2,10 @@
 
 open NUnit.Framework
 
-let fizzBuzz input = if input = 1 then "1" else "2"
+let fizzBuzz input = 
+    if input = 1 then "1" 
+    elif input =2 then "2"
+    else "Fizz"
 
 [<Test>]
 let ``the number 1 is returned as is`` () =
