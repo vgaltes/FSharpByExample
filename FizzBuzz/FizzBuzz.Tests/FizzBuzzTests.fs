@@ -8,13 +8,13 @@ let fizzBuzz input =
     else "Fizz"
 
 [<Test>]
-let ``the number 1 is returned as is`` () =
+let ``the number 1 is fizzBuzzed as is`` () =
     Assert.That ("1" = fizzBuzz 1)
 
 [<Test>]
-let ``the number 2 is returned as is`` () =
+let ``the number 2 is fizzBuzzed as is`` () =
     Assert.That ("2" = fizzBuzz 2)
 
 [<Test>]
-let ``the number 3 is returned as Fizz`` () =
+let ``the number 3 is fizzBuzzed as Fizz`` () =
     Assert.That ("Fizz" = fizzBuzz 3)
