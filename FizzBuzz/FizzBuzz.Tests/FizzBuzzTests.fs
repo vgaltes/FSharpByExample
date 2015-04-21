@@ -4,6 +4,7 @@ open NUnit.Framework
 
 let fizzBuzz input = 
     if input = 3 then "Fizz"
+    elif input = 5 then "Buzz"
     else input.ToString()
 
 [<Test>]
