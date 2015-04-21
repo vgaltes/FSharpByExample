@@ -11,3 +11,7 @@ let ``the number 1 is returned as is`` () =
 [<Test>]
 let ``the number 2 is returned as is`` () =
     Assert.That ("2" = fizzBuzz 2)
+
+[<Test>]
+let ``the number 3 is returned as Fizz`` () =
+    Assert.That ("Fizz" = fizzBuzz 3)
