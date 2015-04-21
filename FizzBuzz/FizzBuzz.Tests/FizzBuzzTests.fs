@@ -24,5 +24,5 @@ let ``the number 4 is fizzBuzzed as is`` () =
     Assert.That ("4" = fizzBuzz 4)
 
 [<Test>]
-let ``the number 5 is returned as Buzz`` () =
+let ``the number 5 is fizzBuzzed as Buzz`` () =
     Assert.That ("Buzz" = fizzBuzz 5)
