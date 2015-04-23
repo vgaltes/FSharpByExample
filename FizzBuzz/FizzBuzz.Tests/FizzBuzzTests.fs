@@ -38,3 +38,7 @@ let ``the number 9 is fizzBuzzed as Fizz`` () =
 [<Test>]
 let ``the number 10 is fizzBuzzed as Buzz`` () =
     Assert.That ("Buzz" = fizzBuzz 10)
+
+[<Test>]
+let ``the number 15 is fizzBuzzed as FizzBuzz`` () =
+    Assert.That ("FizzBuzz" = fizzBuzz 15)
