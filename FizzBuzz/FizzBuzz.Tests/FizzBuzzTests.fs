@@ -3,7 +3,7 @@
 open NUnit.Framework
 
 let fizzBuzz input = 
-    if List.exists ((=) input) [3; 6; 9] then "Fizz"
+    if input % 3 = 0 then "Fizz"
     elif input = 5 then "Buzz"
     else input.ToString()
 
