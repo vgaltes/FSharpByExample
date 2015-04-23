@@ -3,11 +3,11 @@
 open NUnit.Framework
 
 let fizzBuzz input = 
-    match (input % 3 = 0, input % 5 = 0) with
-    | (true, true) -> "FizzBuzz"
-    | (true, false) -> "Fizz"
-    | (false, true) -> "Buzz"
-    | (false, false) -> input.ToString()
+    match (input % 3, input % 5) with
+    | (0, 0) -> "FizzBuzz"
+    | (0, _) -> "Fizz"
+    | (_, 0) -> "Buzz"
+    | (_, _) -> input.ToString()
 
 [<Test>]
 let ``the number 1 is fizzBuzzed as is`` () =
