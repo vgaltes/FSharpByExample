@@ -3,7 +3,7 @@
 open NUnit.Framework
 
 let fizzBuzz input = 
-    if input = 15 then "FizzBuzz"
+    if input % 15 = 0 then "FizzBuzz"
     elif input % 3 = 0 then "Fizz"
     elif input % 5 = 0 then "Buzz"
     else input.ToString()
