@@ -12,42 +12,15 @@
         open Prod
         open NUnit.Framework 
 
-        [<Test>]
-        let ``the number 1 is fizzBuzzed as is`` () =
-            Assert.That ("1" = fizzBuzz 1)
-
-        [<Test>]
-        let ``the number 2 is fizzBuzzed as is`` () =
-            Assert.That ("2" = fizzBuzz 2)
-
-        [<Test>]
-        let ``the number 3 is fizzBuzzed as Fizz`` () =
-            Assert.That ("Fizz" = fizzBuzz 3)
-
-        [<Test>]
-        let ``the number 4 is fizzBuzzed as is`` () =
-            Assert.That ("4" = fizzBuzz 4)
-
-        [<Test>]
-        let ``the number 5 is fizzBuzzed as Buzz`` () =
-            Assert.That ("Buzz" = fizzBuzz 5)
-
-        [<Test>]
-        let ``the number 6 is fizzBuzzed as Fizz`` () =
-            Assert.That ("Fizz" = fizzBuzz 6)
-
-        [<Test>]
-        let ``the number 9 is fizzBuzzed as Fizz`` () =
-            Assert.That ("Fizz" = fizzBuzz 9)
-
-        [<Test>]
-        let ``the number 10 is fizzBuzzed as Buzz`` () =
-            Assert.That ("Buzz" = fizzBuzz 10)
-
-        [<Test>]
-        let ``the number 15 is fizzBuzzed as FizzBuzz`` () =
-            Assert.That ("FizzBuzz" = fizzBuzz 15)
-
-        [<Test>]
-        let ``the number 30 is fizzBuzzed as FizzBuzz`` () =
-            Assert.That ("FizzBuzz" = fizzBuzz 30)
+        [<TestCase(1, "1")>]
+        [<TestCase(2, "2")>]
+        [<TestCase(3, "Fizz")>]
+        [<TestCase(4, "4")>]
+        [<TestCase(5, "Buzz")>]
+        [<TestCase(6, "Fizz")>]
+        [<TestCase(9, "Fizz")>]
+        [<TestCase(10, "Buzz")>]
+        [<TestCase(15, "FizzBuzz")>]
+        [<TestCase(30, "FizzBuzz")>]
+        let ``the number is fizzBuzzed``(number:int, expectedOutput:string) =
+            Assert.That (fizzBuzz number = expectedOutput)
