@@ -14,8 +14,8 @@
         let deposit amount currency {Amount = (oldAmount, _)} =
             {Amount = (oldAmount + amount, USD)}
 
-        let withdraw amount currency account =
-            Success {Amount = (30, USD)}
+        let withdraw amount currency {Amount = (oldAmount, _)} =
+            Success {Amount = (oldAmount - amount, USD)}
 
     module Tests =
         open Prod
