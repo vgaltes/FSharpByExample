@@ -8,7 +8,7 @@
         let newAccount = {Amount = (0, USD)}
 
         let deposit amount currency account =
-            newAccount
+            {Amount = (10, USD)}
 
     module Tests =
         open Prod
