@@ -38,5 +38,5 @@
 
         [<Test>]
         let ``money can be withdrawn from a bank account``() =
-            let (Success(bankAccount)) = newAccount |> deposit 50 USD |> withdraw 20 USD
-            Assert.AreEqual({ Amount = (30, USD) }, bankAccount)
+            let (Success(bankAccount)) = newAccount |> deposit 50 USD |> withdraw 25 USD
+            Assert.AreEqual({ Amount = (25, USD) }, bankAccount)
