@@ -5,7 +5,12 @@
             | Failure of string
 
         type Currency = 
-        |USD
+            |USD
+
+        let (|>>) result f =
+            match result with
+            | Success(value) -> f value
+            | Failure(error) -> Failure(error)
 
         type Account = {Amount : (int * Currency)}
 
