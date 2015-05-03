@@ -1,9 +1,14 @@
 ﻿module BankKata
     module Prod =
-        
+        type Currency = 
+        |USD
+
+        type Account = {Amount : (int * Currency)}
+
+        let newAccount = {Amount = (20, USD)}
 
     module Tests =
-        
+        open Prod
         open NUnit.Framework
 
         [<Test>]
