@@ -23,3 +23,8 @@
         let ``money can be deposited into a bank account``() =
             let bankAccount = newAccount |> deposit 10 USD
             Assert.AreEqual ((10, USD), bankAccount.Amount)
+
+        [<Test>]
+        let ``money deposited into a bank account should be added to current amount``() =
+            let bankAccount = newAccount |> deposit 10 USD |> deposit 5 USD
+            Assert.AreEqual((15, USD), bankAccount.Amount)
