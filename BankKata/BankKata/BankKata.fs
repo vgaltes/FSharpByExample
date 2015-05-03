@@ -15,7 +15,9 @@
             {Amount = (oldAmount + amount, USD)}
 
         let withdraw amount currency {Amount = (oldAmount, _)} =
-            Success {Amount = (oldAmount - amount, USD)}
+            match oldAmount - amount with
+            | newAmount when newAmount < 0 -> Failure("This bank account cannot be overdrawn.")
+            | newAmount -> Success {Amount = (oldAmount - amount, USD)}
 
     module Tests =
         open Prod
