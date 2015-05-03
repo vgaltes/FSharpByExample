@@ -7,8 +7,8 @@
 
         let newAccount = {Amount = (0, USD)}
 
-        let deposit amount currency account =
-            {Amount = (fst account.Amount + amount, USD)}
+        let deposit amount currency {Amount = (oldAmount, _)} =
+            {Amount = (oldAmount + amount, USD)}
 
     module Tests =
         open Prod
