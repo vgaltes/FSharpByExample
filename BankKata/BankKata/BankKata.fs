@@ -5,7 +5,7 @@
 
         type Account = {Amount : (int * Currency)}
 
-        let newAccount = {Amount = (20, USD)}
+        let newAccount = {Amount = (0, USD)}
 
     module Tests =
         open Prod
