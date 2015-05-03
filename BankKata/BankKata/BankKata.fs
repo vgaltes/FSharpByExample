@@ -40,3 +40,8 @@
         let ``money can be withdrawn from a bank account``() =
             let (Success(bankAccount)) = newAccount |> deposit 50 USD |> withdraw 25 USD
             Assert.AreEqual({ Amount = (25, USD) }, bankAccount)
+
+        [<Test>]
+        let ``a bank account cannot be overdrawn``() =
+            let (Failure(error)) = newAccount |> deposit 50 USD |> withdraw 100 USD
+            Assert.AreEqual("This bank account cannot be overdrawn.", error)
